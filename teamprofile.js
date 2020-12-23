@@ -5,5 +5,9 @@ const table = require ("table");
 
 //creating the connection for MySql//
 const connection = mysql.createConnection({
-    
-})
+    host:"localhost",
+    port: 3306,
+    user: "root", //double check to see if root is still the user//
+    password: "hardworkeR/1",
+    database: "teamprofile_db"
+});
