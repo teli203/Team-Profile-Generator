@@ -23,4 +23,19 @@ async function init() {
     }     
 }
 
-let department
+let department = [];
+let roles = [];
+let employees = [];
+
+//selection from department//
+function populateDepartment() {}
+const query = "Select";
+connection.query (query, err, res) => {
+ if (err) {
+     await promptUser ();
+    
+ }
+ res.forEach (department) => {
+
+ }
+}
