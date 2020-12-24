@@ -11,3 +11,16 @@ const connection = mysql.createConnection({
     password: "hardworkeR/1",
     database: "teamprofile_db"
 });
+
+async function init() {
+    try {
+        const data = await promptUser();
+        const md = generateMarkdown(data);
+
+    }
+    catch (err) {
+        console.log(err);
+    }     
+}
+
+let department
