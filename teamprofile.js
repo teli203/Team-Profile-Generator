@@ -30,12 +30,33 @@ let employees = [];
 //selection from department//
 function populateDepartment() {}
 const query = "Select";
-connection.query (query, err, res) => {
+connection.query (query, err, res => {
  if (err) {
      await promptUser ();
     
  }
- res.forEach (department) => {
+ res.forEach (department => {
+     department.set({
+         name: department.name,
+         value: department.id,
+     })
+ })
+ return departments;
+})
 
- }
+function populateRoles(){
+    const query = "Select * from roles";
+    connection.query(query, (err,res) => {
+        if (err) {
+            await promptUser ();
+           
+        }
+        res.forEach (role => {
+            role.set({
+                name: role.name,
+                value: role.id,
+            })
+        })
+        return role;
+    }
 }
