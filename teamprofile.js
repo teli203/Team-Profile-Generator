@@ -57,6 +57,19 @@ function populateRoles(){
                 value: role.id,
             })
         })
-        return role;
-    }
+    })
+    return role;
+}
+
+function mainPrompt (){
+    inquirer.prompt({
+        name: "choice",
+        type: "list",
+        message:"What can I help you with?",
+        choices: 
+        [ "Add employees, departments, roles",
+        "Update roles, employees, departments",
+        "View employees, departments, roles",
+        "Exit"]
+    }).then(onMainPromptAnswer);
 }
